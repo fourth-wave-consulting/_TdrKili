@@ -14,7 +14,7 @@
 		,	"type": "string"
 		,	"title": "Google Universal Analytics ID"
 		,	"description": "Enter the Google Universal Analytics Tracking ID. SuiteCommerce Advanced inserts this property into each page of the application. To locate the tracking ID, login to your Google Analytics account and go to Admin > Property > Property Settings."
-		,	"default": ""
+		,	"default": "UA-42573868-1"
 		}
 	,	"tracking.googleUniversalAnalytics.domainName": {
 			"group": "integrations"
@@ -22,7 +22,7 @@
 		,	"type": "string"
 		,	"title": "Google Universal Analytics domain"
 		,	"description": "Enter the domain used for Google Universal Analytics. The value you enter depends on which application you want to use Google Universal Analytics"
-		,	"default": ""
+		,	"default": "tdr.fourthwc.net"
 		}
 	,	"tracking.googleUniversalAnalytics.domainNameSecure": {
 			"group": "integrations"
@@ -30,7 +30,7 @@
 		,	"type": "string"
 		,	"title": "Google Universal Analytics secure domain"
 		,	"description": "Enter the secure domain used for Google Universal Analytics. Possible values are the same as the Universal Analytics Domain property."
-		,	"default": ""
+		,	"default": "netsuite.com"
 		}
 	}
 }

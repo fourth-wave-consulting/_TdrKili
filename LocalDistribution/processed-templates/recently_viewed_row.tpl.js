@@ -1,3 +1,0 @@
-define('recently_viewed_row.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Handlebars, compilerNameLookup){ var template = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return " <ul class=\"recently-viewed-row-cell\" data-type=\"carousel-items\"><div data-type=\"backbone.collection.view.cells\"></div></ul>  ";
-},"useData":true}); template.Name = 'recently_viewed_row'; return template;});

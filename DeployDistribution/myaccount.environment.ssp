@@ -255,10 +255,10 @@ SC.ENVIRONMENT.isTouchEnabled = ('ontouchstart' in window) || window.DocumentTou
 document.documentElement.className = (SC.ENVIRONMENT.isTouchEnabled) ? "touch" : "no-touch";
 
 // Include Language Files
-document.write('<script src="<%= session.getAbsoluteUrl('languages/en.js') %>?t=1650317659013"><\\/script>');
+document.write('<script src="<%= session.getAbsoluteUrl('languages/en.js') %>?t=1672093507549"><\\/script>');
 
 <% if (Environment && Environment.currentLanguage && Environment.currentLanguage.locale && Environment.currentLanguage.locale !== 'en') { %>
-	document.write('<script src="<%= session.getAbsoluteUrl('languages/myaccount_' + Environment.currentLanguage.locale + '.js') %>?t=1650317659013"><\\/' + 'script' + '>');
+	document.write('<script src="<%= session.getAbsoluteUrl('languages/myaccount_' + Environment.currentLanguage.locale + '.js') %>?t=1672093507549"><\\/' + 'script' + '>');
 <% } %>
 
 SC.extensionModules = [];

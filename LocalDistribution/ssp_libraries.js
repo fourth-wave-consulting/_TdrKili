@@ -10540,9 +10540,14 @@ ConfigurationManifestDefaults = {
 	},
 	"tracking": {
 		"googleAdWordsConversion": {
-			"id": "",
+			"id": "AW-985285439",
 			"value": 0,
-			"label": ""
+			"label": "h8hpCPr4pIMBEL-G6dUD"
+		},
+		"GoogleAnalyticsFour": {
+			"propertyID": "G-GY69EY0XSY",
+			"domainName": "fourthwc.net",
+			"domainNameSecure": "netsuite.com"
 		},
 		"googleUniversalAnalytics": {
 			"propertyID": "",

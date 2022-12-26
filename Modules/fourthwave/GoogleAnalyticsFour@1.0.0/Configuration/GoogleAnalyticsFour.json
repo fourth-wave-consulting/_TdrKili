@@ -1,0 +1,36 @@
+{
+	"type": "object",
+    "subtab": {
+        "id": "googleanalytics4",
+        "title": "Google Analytics Four",
+        "docRef": "bridgehead_4667032444",
+        "description": "Google Analytics version 4",
+        "group": "integrations"
+    }
+,	"properties": {
+		"tracking.GoogleAnalyticsFour.propertyID": {
+			"group": "integrations"
+		,	"subtab": "universalanalytics"
+		,	"type": "string"
+		,	"title": "Google Analytics 4 tracking ID"
+		,	"description": "Enter the Google Analytics 4 Tracking ID. SuiteCommerce Advanced inserts this property into each page of the application. To locate the tracking ID, login to your Google Analytics account and go to Admin > Property > Property Settings."
+		,	"default": "G-GY69EY0XSY"
+		}
+	,	"tracking.GoogleAnalyticsFour.domainName": {
+			"group": "integrations"
+		,	"subtab": "universalanalytics"
+		,	"type": "string"
+		,	"title": "Google Analytics 4 domain"
+		,	"description": "Enter the domain used for Google Universal Analytics. The value you enter depends on which application you want to use Google Universal Analytics"
+		,	"default": "fourthwc.net"
+		}
+	,	"tracking.GoogleAnalyticsFour.domainNameSecure": {
+			"group": "integrations"
+		,	"subtab": "universalanalytics"
+		,	"type": "string"
+		,	"title": "Google Analytics 4 secure domain"
+		,	"description": "Enter the secure domain used for Google Universal Analytics. Possible values are the same as the Universal Analytics Domain property."
+		,	"default": "netsuite.com"
+		}
+	}
+}

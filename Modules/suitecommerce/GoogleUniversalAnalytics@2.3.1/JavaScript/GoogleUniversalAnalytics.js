@@ -61,6 +61,7 @@
 				{
 					// [Page Tracking](https://developers.google.com/analytics/devguides/collection/analyticsjs/pages#overriding)
 					win[name]('send', 'pageview', url);
+					console.log('GUA pageview: ' + url);
 				}
 
 				return this;
@@ -129,7 +130,7 @@
 		,	trackTransaction: function (transaction)
 			{
 				var transaction_id = transaction.get('confirmationNumber');
-
+				console.log('GUA track trans firing');
 				GoogleUniversalAnalytics.addTrans({
 					id: transaction_id
 				,	revenue: transaction.get('subTotal')

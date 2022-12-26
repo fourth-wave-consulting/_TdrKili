@@ -1,3 +1,0 @@
-define('order_wizard_promocodenotifications.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Handlebars, compilerNameLookup){ var template = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return " <div data-type=\"Promocode.Notifications\"></div>";
-},"useData":true}); template.Name = 'order_wizard_promocodenotifications'; return template;});

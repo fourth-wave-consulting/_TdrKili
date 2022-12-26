@@ -10544,10 +10544,15 @@ ConfigurationManifestDefaults = {
 			"value": 0,
 			"label": "h8hpCPr4pIMBEL-G6dUD"
 		},
+		"GoogleAnalyticsFour": {
+			"propertyID": "G-GY69EY0XSY",
+			"domainName": "fourthwc.net",
+			"domainNameSecure": "netsuite.com"
+		},
 		"googleUniversalAnalytics": {
-			"propertyID": "",
-			"domainName": "",
-			"domainNameSecure": ""
+			"propertyID": "UA-42573868-1",
+			"domainName": "tdr.fourthwc.net",
+			"domainNameSecure": "netsuite.com"
 		}
 	},
 	"ItemOptions": {
