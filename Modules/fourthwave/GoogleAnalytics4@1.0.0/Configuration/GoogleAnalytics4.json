@@ -10,27 +10,27 @@
 ,	"properties": {
 		"tracking.googleAnalytcis4.propertyID": {
 			"group": "integrations"
-		,	"subtab": "universalanalytics"
+		,	"subtab": "googleanalytics4"
 		,	"type": "string"
-		,	"title": "Google Universal Analytics ID"
-		,	"description": "Enter the Google Universal Analytics Tracking ID. SuiteCommerce Advanced inserts this property into each page of the application. To locate the tracking ID, login to your Google Analytics account and go to Admin > Property > Property Settings."
-		,	"default": ""
+		,	"title": "Google Analytics 4 tracking ID"
+		,	"description": "Enter the Google Analytics 4 Tracking ID. SuiteCommerce Advanced inserts this property into each page of the application. To locate the tracking ID, login to your Google Analytics account and go to Admin > Property > Property Settings."
+		,	"default": "G-GY69EY0XSY"
 		}
 	,	"tracking.googleAnalytcis4.domainName": {
 			"group": "integrations"
-		,	"subtab": "universalanalytics"
+		,	"subtab": "googleanalytics4"
 		,	"type": "string"
-		,	"title": "Google Universal Analytics domain"
+		,	"title": "Google Analytics 4 domain"
 		,	"description": "Enter the domain used for Google Universal Analytics. The value you enter depends on which application you want to use Google Universal Analytics"
-		,	"default": ""
+		,	"default": "fourthwc.net"
 		}
 	,	"tracking.googleAnalytcis4.domainNameSecure": {
 			"group": "integrations"
-		,	"subtab": "universalanalytics"
+		,	"subtab": "googleanalytics4"
 		,	"type": "string"
-		,	"title": "Google Universal Analytics secure domain"
+		,	"title": "Google Analytics 4 secure domain"
 		,	"description": "Enter the secure domain used for Google Universal Analytics. Possible values are the same as the Universal Analytics Domain property."
-		,	"default": ""
+		,	"default": "netsuite.com"
 		}
 	}
 }
