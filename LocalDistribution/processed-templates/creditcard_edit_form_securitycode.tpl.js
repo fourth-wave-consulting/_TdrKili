@@ -1,0 +1,11 @@
+define('creditcard_edit_form_securitycode.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Handlebars, compilerNameLookup){ var template = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3=container.escapeExpression, alias4="function";
+
+  return " <div class=\"creditcard-edit-form-securitycode\"><div class=\"creditcard-edit-form-securitycode-group\" data-input=\"ccsecuritycode\" data-validation=\"control-group\"><label class=\"creditcard-edit-form-securitycode-group-label\" for=\"ccsecuritycode\"> "
+    + alias3((compilerNameLookup(helpers,"translate") || (depth0 && compilerNameLookup(depth0,"translate")) || alias2).call(alias1,"Security Number",{"name":"translate","hash":{},"data":data}))
+    + " <span class=\"creditcard-edit-form-securitycode-group-label-required\">*</span></label><div class=\"creditcard-edit-form-securitycode-controls\" data-validation=\"control\"><input type=\"text\" class=\"creditcard-edit-form-securitycode-group-input\" id=\"ccsecuritycode\" name=\"ccsecuritycode\" value=\""
+    + alias3(((helper = (helper = compilerNameLookup(helpers,"value") || (depth0 != null ? compilerNameLookup(depth0,"value") : depth0)) != null ? helper : alias2),(typeof helper === alias4 ? helper.call(alias1,{"name":"value","hash":{},"data":data}) : helper)))
+    + "\" maxlength=\"4\"><a href=\"#\" class=\"creditcard-edit-form-securitycode-link\"><span class=\"creditcard-edit-form-securitycode-icon-container\"><i class=\"creditcard-edit-form-securitycode-icon\"  data-toggle=\"popover\" data-placement=\"bottom\" data-title=\""
+    + alias3(((helper = (helper = compilerNameLookup(helpers,"creditCardHelpTitle") || (depth0 != null ? compilerNameLookup(depth0,"creditCardHelpTitle") : depth0)) != null ? helper : alias2),(typeof helper === alias4 ? helper.call(alias1,{"name":"creditCardHelpTitle","hash":{},"data":data}) : helper)))
+    + "\"/></span></a></div></div></div>  ";
+},"useData":true}); template.Name = 'creditcard_edit_form_securitycode'; return template;});

@@ -1,0 +1,3 @@
+define('cms_landing_page.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Handlebars, compilerNameLookup){ var template = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return " <div class=\"cms-landing-page-row\"><div class=\"cms-landing-page-row-full-col\" data-cms-area=\"cms-landing-page-placeholder-page-type\" data-cms-area-filters=\"page_type\"></div><div class=\"cms-landing-page-row-full-col\" data-cms-area=\"cms-landing-page-placeholder-path\" data-cms-area-filters=\"path\"></div></div> ";
+},"useData":true}); template.Name = 'cms_landing_page'; return template;});

@@ -1,0 +1,3 @@
+define('order_wizard_msr_package_list.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Handlebars, compilerNameLookup){ var template = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return " <div data-type=\"package-condensed-view-container\"><div data-view=\"Packages.Collection\"></div></div>  ";
+},"useData":true}); template.Name = 'order_wizard_msr_package_list'; return template;});

@@ -1,0 +1,3 @@
+define('transaction_line_views_options_selected.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Handlebars, compilerNameLookup){ var template = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return " <div class=\"transaction-line-views-options-selected-content\" data-action=\"pushable\" data-id=\"transaction-line-views-options\"><div data-view=\"Options.Collection\"></div></div>  ";
+},"useData":true}); template.Name = 'transaction_line_views_options_selected'; return template;});

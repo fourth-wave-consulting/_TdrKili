@@ -1,0 +1,3 @@
+define('order_wizard_address_row.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Handlebars, compilerNameLookup){ var template = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return " <div class=\"order-wizard-address-row\"><div data-type=\"backbone.collection.view.cells\"></div></div>  ";
+},"useData":true}); template.Name = 'order_wizard_address_row'; return template;});

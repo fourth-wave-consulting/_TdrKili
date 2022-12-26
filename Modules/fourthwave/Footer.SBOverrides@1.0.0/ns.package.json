@@ -1,0 +1,14 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*"
+        ],
+        "templates": [
+            "Templates/*"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Footer.SB@1.0.0/Templates/footer.tpl": "templates/footer.tpl",
+        "suitecommerce/Footer.SB@1.0.0/Templates/footer_simplified.tpl": "templates/footer_simplified.tpl"
+    }
+}

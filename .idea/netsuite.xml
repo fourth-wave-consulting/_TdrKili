@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AccountsInformationState">
+    <option name="accountsInformation">
+      <Toplevel>
+        <option name="molecules">
+          <Molecules>
+            <option name="molecule">
+              <array>
+                <Molecule>
+                  <option name="UUID" value="8c15b3f1-d60d-455e-b759-31a567d4c9d9" />
+                  <option name="description" value="Production" />
+                  <option name="url" value="system.netsuite.com" />
+                </Molecule>
+                <Molecule>
+                  <option name="UUID" value="86d47be1-dd23-45b3-9675-874224bb5b39" />
+                  <option name="description" value="Sandbox" />
+                  <option name="url" value="system.sandbox.netsuite.com" />
+                </Molecule>
+              </array>
+            </option>
+          </Molecules>
+        </option>
+        <option name="sdkSettings">
+          <SdkSettings>
+            <option name="moleculeSettings">
+              <MoleculeSettings>
+                <option name="moleculeSetting">
+                  <array>
+                    <MoleculeSetting>
+                      <option name="accounts">
+                        <Accounts>
+                          <option name="account">
+                            <array>
+                              <Account>
+                                <option name="companies">
+                                  <Companies>
+                                    <option name="company">
+                                      <array>
+                                        <Company>
+                                          <option name="UUID" value="999963e5-82ef-42bc-8f1d-f66bddcd035a" />
+                                          <option name="accountType" value="PRODUCTION" />
+                                          <option name="id" value="TSTDRV1018571" />
+                                          <option name="name" value="Fourth Wave Consulting" />
+                                          <option name="restDomain" value="tstdrv1018571.restlets.api.netsuite.com" />
+                                          <option name="roles">
+                                            <Roles>
+                                              <option name="role">
+                                                <array>
+                                                  <Role>
+                                                    <option name="name" value="Administrator" />
+                                                    <option name="nkey" value="3" />
+                                                  </Role>
+                                                  <Role>
+                                                    <option name="name" value="Developer" />
+                                                    <option name="nkey" value="55" />
+                                                  </Role>
+                                                  <Role>
+                                                    <option name="name" value="Ecommerce Manager" />
+                                                    <option name="nkey" value="1047" />
+                                                  </Role>
+                                                  <Role>
+                                                    <option name="name" value="SDF Developer - FWC" />
+                                                    <option name="nkey" value="1065" />
+                                                  </Role>
+                                                  <Role>
+                                                    <option name="name" value="Sales Rep" />
+                                                    <option name="nkey" value="1005" />
+                                                  </Role>
+                                                </array>
+                                              </option>
+                                            </Roles>
+                                          </option>
+                                          <option name="systemDomain" value="tstdrv1018571.app.netsuite.com" />
+                                          <option name="webservicesDomain" value="tstdrv1018571.suitetalk.api.netsuite.com" />
+                                        </Company>
+                                      </array>
+                                    </option>
+                                  </Companies>
+                                </option>
+                                <option name="email" value="dnb@fourthwc.com" />
+                                <option name="password" value="fef438a336009c8af5f19ac50599249c" />
+                              </Account>
+                            </array>
+                          </option>
+                        </Accounts>
+                      </option>
+                      <option name="molecule">
+                        <Molecule>
+                          <option name="UUID" value="8c15b3f1-d60d-455e-b759-31a567d4c9d9" />
+                        </Molecule>
+                      </option>
+                    </MoleculeSetting>
+                  </array>
+                </option>
+              </MoleculeSettings>
+            </option>
+          </SdkSettings>
+        </option>
+      </Toplevel>
+    </option>
+  </component>
+</project>

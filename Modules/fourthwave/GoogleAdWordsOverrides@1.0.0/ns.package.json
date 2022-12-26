@@ -1,0 +1,14 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*"
+        ],
+        "configuration": [
+            "Configuration/*.json"
+        ]
+    },
+    "overrides":{
+        "suitecommerce/GoogleAdWords@2.3.0/Configuration/GoogleAdWords.json": "/Configuration/GoogleAdWords.json",
+        "suitecommerce/GoogleAdWords@2.3.0/JavaScript/GoogleAdWords.js": "/JavaScript/GoogleAdWords.js"
+    }
+}

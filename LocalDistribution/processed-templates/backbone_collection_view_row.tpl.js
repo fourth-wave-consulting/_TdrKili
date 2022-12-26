@@ -1,0 +1,3 @@
+define('backbone_collection_view_row.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Handlebars, compilerNameLookup){ var template = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return " <div class=\"backbone-collection-view-row\"><div data-type=\"backbone.collection.view.cells\"></div></div>  ";
+},"useData":true}); template.Name = 'backbone_collection_view_row'; return template;});
