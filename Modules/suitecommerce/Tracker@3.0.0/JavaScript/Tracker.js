@@ -79,7 +79,13 @@ define('Tracker'
 		{
 			var doCallback = _.find(this.trackers, function (tracker)
 			{
-				return tracker.doCallback();
+				if (doCallback) {
+					return tracker.doCallback();
+				} else {
+					console.log('doCallback failed, skipping track');
+					return this;
+				}
+
 			});
 
 			!doCallback && event.callback();

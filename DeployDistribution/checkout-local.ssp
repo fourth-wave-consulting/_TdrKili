@@ -111,9 +111,9 @@
 		<!--<![endif]-->
 
 		<!--[if lte IE 9]>
-				<link rel="stylesheet" href="<%= ROOT %>css_ie/checkout_2.css?t=1672093507531"></link>
-				<link rel="stylesheet" href="<%= ROOT %>css_ie/checkout_1.css?t=1672093507531"></link>
-			<link rel="stylesheet" href="<%= ROOT %>css_ie/checkout.css?t=1672093507531"></link>
+				<link rel="stylesheet" href="<%= ROOT %>css_ie/checkout_2.css?t=1672176274863"></link>
+				<link rel="stylesheet" href="<%= ROOT %>css_ie/checkout_1.css?t=1672176274863"></link>
+			<link rel="stylesheet" href="<%= ROOT %>css_ie/checkout.css?t=1672176274863"></link>
 		<![endif]-->															 
 
 		<!--[if lt IE 9]>
@@ -200,7 +200,7 @@
 					url: '<%= session.getAbsoluteUrl("checkout.environment.ssp?" + environmentParameters.join("&") ) %>&t=' + (new Date().getTime())
 				});
 				loadScript({
-					url: '<%= session.getAbsoluteUrl("customFieldsMetadata.ssp?")%>t=1672093507531'
+					url: '<%= session.getAbsoluteUrl("customFieldsMetadata.ssp?")%>t=1672176274863'
 				});
 			</script>
 

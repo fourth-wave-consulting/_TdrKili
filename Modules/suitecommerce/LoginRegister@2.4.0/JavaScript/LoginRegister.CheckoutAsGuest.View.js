@@ -73,12 +73,16 @@ define('LoginRegister.CheckoutAsGuest.View'
 		// @method trackEvent responsible of notifying the Tracker that the guest-checkout operation was made
 	,	trackEvent: function (callback)
 		{
+			// I think this is causing an error - DN FWC
+
 			Tracker.getInstance().trackEvent({
 				category: 'guest-checkout'
 			,	action: 'click'
 			,	value: 1
 			,	callback: callback
 			});
+
+
 		}
 
 		// @method redirect after the checkout-as-guest operation was successfully made this method is in 
