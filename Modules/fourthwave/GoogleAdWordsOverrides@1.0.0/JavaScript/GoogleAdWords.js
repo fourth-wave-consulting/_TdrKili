@@ -16,10 +16,12 @@
 define('GoogleAdWords'
 	,	[	'Tracker'
 		,	'jQuery'
+		,'Profile.Model'
 	]
 	,	function (
 		Tracker
 		,	jQuery
+		, ProfileModel
 	)
 	{
 		'use strict';
@@ -40,6 +42,10 @@ define('GoogleAdWords'
 				{
 					//this is just fixing the enhanced conversion data variable
 					console.log('Ads pageview firing: ' + url);
+					var profile_model = ProfileModel.getInstance();
+					console.log('profile_model: ' + JSON.stringify(profile_model));
+					fwcPhone = profile_model.get('phone')
+					console.log('fwcPhone: ' + fwcPhone);
 				}
 
 				return this;
