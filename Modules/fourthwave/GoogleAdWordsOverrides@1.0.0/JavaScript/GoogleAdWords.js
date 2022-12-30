@@ -34,6 +34,17 @@ define('GoogleAdWords'
 				return this;
 			}
 
+			,	trackPageview: function (url)
+			{
+				if (_.isString(url))
+				{
+					//this is just fixing the enhanced conversion data variable
+					console.log('Ads pageview firing: ' + url);
+				}
+
+				return this;
+			}
+
 			,	trackTransaction: function (transaction)
 			{
 				var config = GoogleAdWords.config;
