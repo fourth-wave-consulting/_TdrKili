@@ -135,7 +135,7 @@
 			   for(var i=0; i < css_files.length; i++)
 			   {
 			%>
-					<link rel="stylesheet" href="<%= session.getAbsoluteUrl(css_files[i]) %>?t=1672087993220">
+					<link rel="stylesheet" href="<%= session.getAbsoluteUrl(css_files[i]) %>?t=1672380966943">
 			<%   
 			   }
 			%>
@@ -148,16 +148,16 @@
 		var ie_css_files = app_includes.checkout.ie;
 		for(var i=0; i < ie_css_files.length; i++)
 		{
-%><link rel="stylesheet" href="<%= session.getAbsoluteUrl(ie_css_files[i]) %>?t=1672087993220">
+%><link rel="stylesheet" href="<%= session.getAbsoluteUrl(ie_css_files[i]) %>?t=1672380966943">
 <% 
 		}
 	}
 	else
 	{ 
 %>
-		<link rel="stylesheet" href="<%= session.getAbsoluteUrl(Application.getNonManageResourcesPathPrefix() + 'css_ie/checkout_2.css') %>?t=1672087993220">
-		<link rel="stylesheet" href="<%= session.getAbsoluteUrl(Application.getNonManageResourcesPathPrefix() + 'css_ie/checkout_1.css') %>?t=1672087993220">
-		<link rel="stylesheet" href="<%= session.getAbsoluteUrl(Application.getNonManageResourcesPathPrefix() + 'css_ie/checkout.css') %>?t=1672087993220">
+		<link rel="stylesheet" href="<%= session.getAbsoluteUrl(Application.getNonManageResourcesPathPrefix() + 'css_ie/checkout_2.css') %>?t=1672380966943">
+		<link rel="stylesheet" href="<%= session.getAbsoluteUrl(Application.getNonManageResourcesPathPrefix() + 'css_ie/checkout_1.css') %>?t=1672380966943">
+		<link rel="stylesheet" href="<%= session.getAbsoluteUrl(Application.getNonManageResourcesPathPrefix() + 'css_ie/checkout.css') %>?t=1672380966943">
 <% } %>
 <![endif]-->
 
@@ -191,10 +191,10 @@ var SC=window.SC={ENVIRONMENT:{jsEnvironment:typeof nsglobal==='undefined'?'brow
 
 		<script>
 			loadScript({
-				url: '<%= session.getAbsoluteUrl("checkout.environment.ssp?" + environmentParameters.join("&") ) %>&t=1672087993220'
+				url: '<%= session.getAbsoluteUrl("checkout.environment.ssp?" + environmentParameters.join("&") ) %>&t=1672380966943'
 			});
 			loadScript({
-				url: '<%= session.getAbsoluteUrl("customFieldsMetadata.ssp?")%>t=1672087993220'
+				url: '<%= session.getAbsoluteUrl("customFieldsMetadata.ssp?")%>t=1672380966943'
 			});
 		</script>
 
@@ -222,7 +222,7 @@ var SC=window.SC={ENVIRONMENT:{jsEnvironment:typeof nsglobal==='undefined'?'brow
 		   for(var i=0; i < js_files.length; i++)
 		   {
 		%>
-				<script src="<%= session.getAbsoluteUrl(js_files[i]) %>?t=1672087993220"></script>
+				<script src="<%= session.getAbsoluteUrl(js_files[i]) %>?t=1672380966943"></script>
 		<%   
 		   }
 		%>

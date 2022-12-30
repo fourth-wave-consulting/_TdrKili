@@ -249,7 +249,7 @@ document.documentElement.className = (SC.ENVIRONMENT.isTouchEnabled) ? "touch" :
 
 // Include Language Files
 <% if (Environment && Environment.currentLanguage && Environment.currentLanguage.locale && Environment.currentLanguage.locale !== 'en') { %>
-	document.write('<script src="<%= session.getAbsoluteUrl('languages/checkout_' + Environment.currentLanguage.locale + '.js') %>?t=1672087993306"><\\/' + 'script' + '>');
+	document.write('<script src="<%= session.getAbsoluteUrl('languages/checkout_' + Environment.currentLanguage.locale + '.js') %>?t=1672380967217"><\\/' + 'script' + '>');
 <% } %>
 
 SC.extensionModules = [];

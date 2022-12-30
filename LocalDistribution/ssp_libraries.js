@@ -10550,9 +10550,9 @@ ConfigurationManifestDefaults = {
 			"domainNameSecure": "netsuite.com"
 		},
 		"googleUniversalAnalytics": {
-			"propertyID": "",
-			"domainName": "",
-			"domainNameSecure": ""
+			"propertyID": "UA-42573868-1",
+			"domainName": "tdr.fourthwc.net",
+			"domainNameSecure": "netsuite.com"
 		}
 	},
 	"ItemOptions": {

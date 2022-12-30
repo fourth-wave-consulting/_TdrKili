@@ -60,15 +60,20 @@
 </div>
     <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.0.1/src/glowCookies.min.js"></script>
     <script>
-        glowCookies.start('en', { 
-            analytics: 'UA-42573868-1', 
-            policyLink: 'https://google.com',
-			style: 2,
-			hideAfterClick: true,
-			border: 'none',
-            bannerHeading: '<h2>🍪 Accept cookies & privacy policy?</h2>',
-            acceptBtnText: 'Accept Cookies'
-            
+        // On Document Ready and if glowCookies exists
+        $(document).ready(function() {
+            if (typeof glowCookies !== 'undefined') {
+                glowCookies.start('en', { 
+                    analytics: 'UA-42573868-1', 
+                    policyLink: 'https://google.com',
+                    style: 2,
+                    hideAfterClick: true,
+                    border: 'none',
+                    bannerHeading: '<h2>🍪 Accept cookies & privacy policy?</h2>',
+                    acceptBtnText: 'Accept Cookies'
+                    
+                });
+            }
         });
     </script>
 <GAUFOOT>

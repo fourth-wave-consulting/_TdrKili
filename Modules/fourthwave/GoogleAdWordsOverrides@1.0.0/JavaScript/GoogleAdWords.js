@@ -49,7 +49,7 @@ define('GoogleAdWords'
 					console.log('fwcPhone: ' + fwcPhone);
 					// or can use profile_model.phone or profile_model.altphone
 				}
-
+				
 				return this;
 			}
 
