@@ -14,7 +14,7 @@
 		,	"type": "string"
 		,	"title": "Google AdWords ID"
 		,	"description": "Enter your Google AdWords ID. This value corresponds to the conversion tag you created in your Google AdWords account."
-		,	"default": "AW-985285439"
+		,	"default": "AW-827013006"
 		}
 	,	"tracking.googleAdWordsConversion.value": {
 			"group": "integrations"
@@ -30,7 +30,7 @@
 		,	"type": "string"
 		,	"title": "Google AdWords label"
 		,	"description": "Enter your Google AdWords label. This value corresponds to the conversion tag you created in your Google AdWords account."
-		,	"default": "h8hpCPr4pIMBEL-G6dUD"
+		,	"default": "SYMBCNDKnXkQju-sigM"
 		}
 	}
 }

@@ -36,20 +36,102 @@ define('GoogleAdWords'
 				return this;
 			}
 
+			, enforcePhoneNumberPattern: function (phoneToFix) {
+				/*
+				 * Convert string to match E.164 phone number pattern (e.g. +1234567890),
+				 * otherwise return empty string.
+				 */
+				var newString = phoneToFix.match(/[0-9]{0,14}/g);
+
+				if (newString === null) {
+					return '';
+				}
+				// Join parts returned from RegEx match
+				newString = newString.join('');
+
+				// Start number with "+"
+				newString = '+' + newString;
+
+				// Limit length to 15 characters
+				newString = newString.substring(0, 15);
+
+				return newString;
+			}
 			,	trackPageview: function (url)
 			{
 				if (_.isString(url))
 				{
 					// this is just fixing the enhanced conversion data variable
-					console.log('Ads pageview firing: ' + url);
+					//console.log('Ads pageview firing: ' + url);
 					
 					var profile_model = ProfileModel.getInstance();
-					console.log('profile_model: ' + JSON.stringify(profile_model));
-					fwcPhone = profile_model.get('phone')
-					console.log('fwcPhone: ' + fwcPhone);
-					// or can use profile_model.phone or profile_model.altphone
+					//console.log('profile_model: ' + JSON.stringify(profile_model));
+					// copy to a string then eval to a regular array so I can use it normally
+					var profileModelStr = String(JSON.stringify(profile_model));
+					// console.log('profileModelStr: ' + typeof(profileModelStr) + ' and data: ' + profileModelStr);
+					var profileModelArr = JSON.parse(profileModelStr);
+					console.log('Ads trackpageview startup: profileModelArr: ' + typeof(profileModelArr) + ' and data: ' + JSON.stringify(profileModelArr));
+
+					var fwcEmail = profile_model.get('email');
+					//console.log('pageview fwcEmail: ' + fwcEmail);
+					enhanced_conversion_data.fwcEmail = fwcEmail;
+					//get data from Profile.Model
+					var profile_model = ProfileModel.getInstance();
+					// copy to a string then eval to a regular array so I can use it normally
+					var profileModelStr = String(JSON.stringify(profile_model));
+					var profileModelArr = JSON.parse(profileModelStr);
+					console.log('profileModelArr: ' + typeof(profileModelArr) + ' and data: ' + JSON.stringify(profileModelArr));
+					enhanced_conversion_data.fwcEmail = profile_model.get('email');
+					enhanced_conversion_data.fwcFirstname = profile_model.get('firstname');
+					enhanced_conversion_data.fwcLastname = profile_model.get('lastname');
+					var fwcPhone = profile_model.get('phone');
+					console.log('initial fwcPhone: ' + fwcPhone); //this might be null in guest scenario
+
+					//get default shipping address
+					var PMAddresses = profileModelArr['addresses'];
+					console.log('number of addresses: ' + PMAddresses.length);
+					for (var z=0; z < PMAddresses.length; z++) {
+						console.log('is default shipping? ' + PMAddresses[z]['defaultshipping']);
+						if (PMAddresses[z]['defaultshipping'] == 'T' || PMAddresses.length == 1) {
+							enhanced_conversion_data.fwcStreetAddy = PMAddresses[z]['addr1'];
+							enhanced_conversion_data.fwcCity = PMAddresses[z]['city'];
+							enhanced_conversion_data.fwcRegion = PMAddresses[z]['state'];
+							enhanced_conversion_data.fwcZip = PMAddresses[z]['zip'];
+							enhanced_conversion_data.fwcCountry = PMAddresses[z]['country'];
+							if (!fwcPhone) { //guest will be empty, NS bug
+								enhanced_conversion_data.fwcPhone = PMAddresses[z]['phone'];
+							}
+							if (profile_model.get('firstname') == 'Guest') {
+								// replace from default address
+								var fullName = PMAddresses[z]['fullname'];
+								var guestName = fullName.split(' ');
+								if (typeof guestName[0] !== 'undefined'){
+									enhanced_conversion_data.fwcFirstname = guestName[0];
+								}
+								if (typeof guestName[1] !== 'undefined'){
+									enhanced_conversion_data.fwcLastname = guestName[1];
+								}
+							}
+
+						}
+					}
+
+					//convert phone to E.164 format
+					if (enhanced_conversion_data.fwcCountry == 'US' || enhanced_conversion_data.fwcCountry == 'CA') {
+						// add 1 to phone before converting it to E.164 format for USA and Canada
+						fwcPhone = "1".concat(fwcPhone);
+					}
+					if (fwcPhone && fwcPhone.length > 5) {
+						var newPhone = GoogleAdWords.enforcePhoneNumberPattern(fwcPhone);
+						console.log('newPhone: '+ newPhone);
+						enhanced_conversion_data.FwcPhone = newPhone;
+					}
+
+
+
+					//console.log('FINAL adwords EM data. email: ' + fwcEmail + ' phone: ' + newPhone + ' firstname: ' + fwcFirstname + ' lastname: ' + fwcLastname + ' addr1: ' + fwcStreetAddy + ' city: ' + fwcCity + ' state: ' + fwcRegion + ' zip: ' + fwcZip +  ' and country: ' + fwcCountry);
+					// console.log('FINAL enhanced_conversion_data var: ' + JSON.stringify(globalThis.enhanced_conversion_data)); //this is empty, can't get var from this scope or some shit
 				}
-				
 				return this;
 			}
 
@@ -59,15 +141,6 @@ define('GoogleAdWords'
 				console.log('adwords track transaction running');
 				if (transaction && transaction.get('confirmationNumber'))
 				{
-					console.log(' fwcEmail : ' + fwcEmail );
-					console.log(' fwcPhone  : ' + fwcPhone  );
-
-					var enhanced_conversion_data = {
-						"email": fwcEmail,
-						"phone_number": fwcPhone,
-					}
-
-
 					var transaction_id = transaction.get('confirmationNumber')
 						,	order_subtotal = transaction.get('subTotal');
 					console.log('adwords tt IS firing. trans object:' + JSON.stringify(transaction));
@@ -81,8 +154,6 @@ define('GoogleAdWords'
 				} else {
 					console.log('adwords tt not firing. order conf:' + JSON.stringify(transaction));
 				}
-
-
 				return this;
 			}
 
