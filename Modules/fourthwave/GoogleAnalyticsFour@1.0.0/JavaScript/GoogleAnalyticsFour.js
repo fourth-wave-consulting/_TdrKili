@@ -112,11 +112,11 @@
 					var self = this;
 					var eventName = 'purchase';
 					var eventData = {
-						id: transaction_id,
+						transaction_id: transaction_id,
 						affiliation: SC.ENVIRONMENT.siteSettings.displayname,
-						revenue: transaction.get('subTotal'),
-						subtotal: transaction.get('subTotal'),
+						value: transaction.get('subTotal'),
 						tax: transaction.get('taxTotal'),
+						currency: 'USD',
 						shipping: transaction.get('shippingCost') + transaction.get('handlingCost'),
 						items: []
 				};
